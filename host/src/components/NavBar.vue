@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/contact">Home</router-link>
+      <router-link to="/remote">Remote</router-link>
     </nav>
   </header>
 </template>

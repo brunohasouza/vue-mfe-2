@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve:std": "vue-cli-service serve --mode standalone",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "single-spa": "^5.9.4",
+    "single-spa-vue": "^2.5.1",
+    "systemjs-webpack-interop": "^2.3.7",
     "vue": "^2.6.14",
     "vue-router": "^3.6.5"
   },
