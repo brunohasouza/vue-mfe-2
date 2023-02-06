@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import singleSpaVue from 'single-spa-vue'
 
-// import './set-public-path'
+import './set-public-path'
 import './style.css'
 
 Vue.config.productionTip = false
