@@ -20,7 +20,6 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "@vue-mf/root-config": "//localhost:8080/vue-mf-root-config.js",
           "@vue-mf/host": "//localhost:8080/js/app.js"
         }
       }
@@ -30,6 +29,25 @@
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   </head>
   <body>
+    <script>
+      System.import('single-spa').then(function(singleSpa) {
+        singleSpa.registerApplication({
+          name: '@vue-mf/host',
+          app: () => System.import('@vue-mf/host'),
+          activeWhen: ['/']
+        })
+
+        singleSpa.registerApplication({
+          name: '@vue-mf/remote',
+          app: () => import('http://localhost:5173/src/main.ts'),
+          activeWhen: ['/remote']
+        })
+
+        singleSpa.start({
+          urlRerouteOnly: true
+        })
+      })
+    </script>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
