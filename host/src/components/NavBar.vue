@@ -5,7 +5,8 @@
       <router-link to="/about">About</router-link>
       <router-link to="/contact">Home</router-link>
       <router-link to="/remote">Remote</router-link>
-      <router-link to="/parcel">Parcel</router-link>
+      <router-link to="/parcel">Parcel Webpack</router-link>
+      <router-link to="/parcel-2">Parcel Vite</router-link>
     </nav>
   </header>
 </template>

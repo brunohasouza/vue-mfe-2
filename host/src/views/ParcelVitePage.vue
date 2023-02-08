@@ -19,7 +19,7 @@
     data() {
       return {
         // eslint-disable-next-line
-        parcelConfig: System.import('@vue-mf/parcel'),
+        parcelConfig: System.import('@vue-mf/parcel-2'),
         mountParcel: window.singleSpa.mountRootParcel
       }
     },
@@ -33,10 +33,10 @@
       },
       // Parcels mount asynchronously, so this will be called once the parcel finishes mounting
       parcelMounted() {
-        console.log("parcel mounted");
+        console.log("parcel-2 mounted");
       },
       parcelUpdated() {
-        console.log("parcel updated");
+        console.log("parcel-2 updated");
       }
     }
   }

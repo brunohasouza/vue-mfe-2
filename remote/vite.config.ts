@@ -12,6 +12,9 @@ export default defineConfig({
       }
     }
   },
+  server: {
+    port: 8081
+  },
   plugins: [vue({
     template: {
       transformAssetUrls: {
